@@ -1,0 +1,18 @@
+from tkinter import *
+root = Tk()
+root.title("check button")
+root.geometry("300x250")
+label = Label(root,text="select your skills")
+label.pack()
+python = IntVar()
+c = IntVar()
+check1 = Checkbutton(root,text="python",variable=python)
+check1.pack()
+check2 = Checkbutton(root,text="c",variable=c)
+check2.pack()
+def display():
+    print("python:",python.get())
+    print("c:",c.get())
+button = Button(root, text="submit", command=display)
+button.pack()
+root.mainloop()
